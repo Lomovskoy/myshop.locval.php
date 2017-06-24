@@ -1,13 +1,8 @@
 <?php
-    //Определение контроллера для работы
+    include_once '../config/config.php';        //Инициализация перееменных
+    include_once '../library/mainFanction.php'; //Основные функции
+    //Определение контроллера для работы и имя экшена для формирования страницы
     $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']):'Index';
     $actionName = isset($_GET['action']) ? $_GET['action']:'index';
-    echo 'Подключаемый php файл (Контроллер) = ' . $controllerName . '<br/>';
-    echo 'Функция формирующая страницу (Экшн) = ' . $actionName . '<br/>';
-    //Подключаем контроллер
-    include_once '../controllers/'.$controllerName.'Controller.php';
-    //Формируем название функции
-    $function = $actionName . 'Action';
-    echo 'Полсное название вызываемой функции = '.$function;
-?>
-
+    loadPage($controllerName,$actionName);
+//Урок 1.2.2 пройден
