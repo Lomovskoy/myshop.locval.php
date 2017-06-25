@@ -5,4 +5,4 @@
     $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']):'Index';
     $actionName = isset($_GET['action']) ? $_GET['action']:'index';
     loadPage($controllerName,$actionName);
-//Урок 1.2.2 пройден
+//Урок 1.4.2 пройден
